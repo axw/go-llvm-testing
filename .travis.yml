@@ -5,7 +5,7 @@ env:
   - APT_GET='apt-get --option=Dpkg::Options::=--force-confold --option=Dpkg::options::=--force-unsafe-io --assume-yes --quiet'
 before_install:
   - sudo $APT_GET update
-  - sudo $APT_GET install mercurial git svn cmake
+  - sudo $APT_GET install mercurial git subversion cmake
 install: ./update_llvm.sh
 script: go test -v
 notifications:
