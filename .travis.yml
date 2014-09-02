@@ -10,7 +10,7 @@ before_install:
   - sudo $APT_GET install mercurial git subversion cmake gcc-4.8 g++-4.8
   - export CXX=g++-4.8 CC=gcc-4.8
 install:
-  - ./update_llvm.sh > update_llvm.log
+  - ./update_llvm.sh
 script:
   - go test -v
 notifications:
